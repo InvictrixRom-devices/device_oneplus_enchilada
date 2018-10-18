@@ -24,6 +24,9 @@ $(call inherit-product, device/oneplus/enchilada/device.mk)
 # Inherit some common Invictrix stuff.
 $(call inherit-product, vendor/invictrix/config/common_full_phone.mk)
 
+# Build GApps inline (requires https://gitlab.com/anirudhgupta109/vendor_pixelgapps.git/)
+$(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
+
 PRODUCT_NAME := invictrix_enchilada
 PRODUCT_DEVICE := enchilada
 PRODUCT_MANUFACTURER := OnePlus
